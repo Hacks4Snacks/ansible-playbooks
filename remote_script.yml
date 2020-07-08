@@ -1,0 +1,7 @@
+---
+  - hosts: test #define host(s)
+    tasks:
+      - name: Run script on target host
+        become: yes
+        script: /path/to/script
+
