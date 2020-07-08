@@ -1,0 +1,8 @@
+---
+- hosts: all # will need to be set individually for varying SSH passwords
+  tasks:
+  - name: Set authorized key taken from file
+    authorized_key:
+      user: username # desired username
+      state: present
+      key: "{{ lookup('file', '/home/username/.ssh/id_rsa.pub') }}"
