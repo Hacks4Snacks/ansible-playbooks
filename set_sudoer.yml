@@ -1,4 +1,5 @@
 ---
+# Playbook will need to be run with the -b -K arguments to become sudo and prompt for sudo password.
 - hosts: all
   tasks:
     - lineinfile:
